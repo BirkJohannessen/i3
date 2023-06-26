@@ -202,3 +202,7 @@ exec --no-startup-id $HOME/.config/i3/profiles/$profile/startup.sh
 # Setup default background photo
 # --head=0 && nitrogen --set-auto $HOME/.config/i3/profiles/$profile/default.png --head=1
 exec --no-startup-id nitrogen --set-auto $HOME/.config/i3/profiles/$profile/default.png 
+
+
+exec --no-startup-id sudo sh -c "echo "2" > /sys/module/hid_apple/parameters/fnmode"
+exec --no-startup-id sudo update-initramfs -u -k all
