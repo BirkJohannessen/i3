@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $profile bravo
+set $profile delta
 set $mod Mod4
 
 include $HOME/.config/i3/profiles/$profile/monitors.conf
