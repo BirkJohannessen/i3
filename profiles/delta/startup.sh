@@ -9,3 +9,5 @@ xinput set-prop 16 352 1
 xinput set-prop 16 329 1
 
 ./keyboardStartupFix.sh
+
+xset s off
