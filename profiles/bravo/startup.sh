@@ -7,5 +7,8 @@ xset dpms 0 0 1200
 #xinput for mousepad fix
 xinput set-prop 16 352 1
 xinput set-prop 16 327 1
+xinput set-prop 16 350 1
+
+setxvkbmap no
 
 ./keyboardStartupFix.sh
