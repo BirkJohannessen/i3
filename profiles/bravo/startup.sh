@@ -9,6 +9,6 @@ xinput set-prop 16 352 1
 xinput set-prop 16 327 1
 xinput set-prop 16 350 1
 
-setxvkbmap no
+setxkbmap -layout no
 
 ./keyboardStartupFix.sh
