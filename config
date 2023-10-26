@@ -8,7 +8,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $profile alpha
+set $profile delta
 set $mod Mod4
 
 include $HOME/.config/i3/profiles/$profile/monitors.conf
@@ -180,9 +180,9 @@ exec_always nitrogen --restore
 
 
 ## Screenshots
-bindsym Print exec --no-startup-id maim "/home/birkj/Pictures/$(date).png"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/birkj/Pictures/$(date).png"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/birkj/Pictures/$(date).png"
+bindsym Print exec --no-startup-id maim $HOME/Pictures/$(date +%Y-%m-%d--yyyymmdd--%T).png
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) $HOME/Pictures/$(date +%Y-%m-%d--yyyymmdd--%T).png
+bindsym Shift+Print exec --no-startup-id maim --select $HOME/Pictures/$(date +%Y-%m-%d--yyyymmdd--%T).png
 
 ## Clipboard Screenshots
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
