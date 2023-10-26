@@ -5,4 +5,5 @@ sudo apt install xfce4-terminal -y
 sudo apt install xautolock -y
 sudo apt install maim -y
 sudo apt install xdotool -y
-
+sudo apt install scrot -y
+sudo apt install imagemagick -y

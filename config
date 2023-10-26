@@ -190,7 +190,8 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewi
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 #sys keybinds
-bindsym Control+Mod1+l exec "i3lock -c 000000"
+# bindsym Control+Mod1+l exec "i3lock -c 000000"
+bindsym Control+Mod1+l exec $HOME/.config/i3/lock.sh 
 
 # auto lock the screen
 exec "xautolock -detectsleep -time 20 -locker \"i3lock -c 000000\""
