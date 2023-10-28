@@ -194,7 +194,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym Control+Mod1+l exec $HOME/.config/i3/lock.sh 
 
 # auto lock the screen
-exec "xautolock -detectsleep -time 20 -locker \"i3lock -c 000000\""
+exec "xautolock -detectsleep -time 20 -locker \"$HOME/.config/i3/lock.sh\""
 
 # Startup script to fix monitors
 exec --no-startup-id $HOME/.config/i3/profiles/$profile/startup.sh

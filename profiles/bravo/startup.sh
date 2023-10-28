@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #screen save afer 20 mins.
-xset dpms 0 0 1200
+xset dpms 0 0 600 
 
 
 #xinput for mousepad fix
