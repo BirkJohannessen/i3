@@ -1,6 +1,28 @@
 #!/usr/bin/env bash
 # icon="$HOME/.config/i3/icon-default.png"
 bgdef="$HOME/.config/i3/background-default.png"
+icodef="$HOME/.config/i3/icon-default.png"
+icogen="$HOME/.config/i3/icon-gen.png"
+bggen="$HOME/.config/i3/background-gen.png"
 
-# $HOME/.config/i3/i3lockmore/i3lockmore --image-fill $bgdef --lock-icon $icon
-$HOME/.config/i3/i3lockmore/i3lockmore --image-fill $bgdef
+if [[ ! -f $icogen ]]; then
+    magick $icodef \( +clone -threshold 101% -fill white -draw 'circle %[fx:int(w/2)],%[fx:int(h/2)] %[fx:int(w/2)],%[fx:80+int(h/2)]' \) -channel-fx '| gray=>alpha' $icogen
+    # convert screenshot.png lock.png -gravity center -composite screenshot.png
+fi
+
+
+# if [[ ! -f $bggen ]]; then
+    #screenarea=$(xrandr --current | grep -oP '(?<=current )\d+ x \d+')
+    #screenarea=${screenarea// /}
+    #screens=( $(xrandr --current | grep -oP '\d+x\d+\+\d+\+\d+') )
+
+    #convert -size $screenarea xc:black -quality 11 png24:"$bggen"
+
+    #convert "$bggen" "$bgdef" -gravity Center -composite -quality 11 png24:"$bggen"
+#fi
+
+#i3lock -i $bggen
+
+
+# $HOME/.config/i3/i3lockmore/i3lockmore --image-fill $bgdef
+$HOME/.config/i3/i3lockmore/i3lockmore --image-fill $bgdef --lock-icon $icogen
