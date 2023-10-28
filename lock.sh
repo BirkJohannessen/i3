@@ -6,7 +6,16 @@ icogen="$HOME/.config/i3/icon-gen.png"
 bggen="$HOME/.config/i3/background-gen.png"
 
 if [[ ! -f $icogen ]]; then
-    magick $icodef \( +clone -threshold 101% -fill white -draw 'circle %[fx:int(w/2)],%[fx:int(h/2)] %[fx:int(w/2)],%[fx:80+int(h/2)]' \) -channel-fx '| gray=>alpha' $icogen
+    convert $icodef  -resize 190x190 $icogen
+    convert $icogen \
+        -gravity Center \
+        \( -size 190x190 \
+           xc:Black \
+           -fill White \
+           -draw 'circle 95 95 95 1' \
+           -alpha Copy \
+        \) -compose CopyOpacity -composite \
+        -trim $icogen
     # convert screenshot.png lock.png -gravity center -composite screenshot.png
 fi
 
