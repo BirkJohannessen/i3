@@ -7,5 +7,3 @@ I3WM: https://i3wm.org/
 
 ## Instructions to install (ubuntu)
 
-sudo apt install i3wm
-sudo apt install to be continued...
